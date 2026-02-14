@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Valentine</title>
+     <link rel="stylesheet" href="valentine.css" />
+</head>
+</head>
+<body>
+    <h1>Happy Valentine's Day,Sayang!</h1>
+    <p>14 February 2026</p>
+    <p>Selamat hari valentine pacarku yang cantik bangettttt, akhir akhir ini walaupun banyak masalah mengancam dirimu Selalu semangat yah ada aku yang selalu di sampingmu ILove You💖</p>
+    <button onclick="showMessage()">Klik untuk Pesan Khusus</button>
+    
+    <script>
+        // Fungsi untuk menampilkan pesan tambahan
+        function showMessage() {
+            alert("Apapun Keadaan Kita sekarang Kita jangan sampe putus yah! ❤️ Est 2020-2026");
+        }
+        
+        // Animasi hati jatuh
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        
+        // Buat hati jatuh setiap 300ms
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
